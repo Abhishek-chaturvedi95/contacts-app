@@ -1,6 +1,6 @@
 const passport = require('passport')
 const express = require('express')
-
+const User = require('../models/User');
 
 module.exports = (app) => {
     app.get('/auth/google' , passport.authenticate('google' , {
@@ -33,7 +33,7 @@ module.exports = (app) => {
                 })
             }
         } catch(e){
-            res.status(400).json(e)
+            res.status(400).json({message: "in the catch block"})
         }
     })
 
