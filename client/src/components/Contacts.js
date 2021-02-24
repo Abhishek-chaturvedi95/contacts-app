@@ -96,16 +96,6 @@ const Contacts = () => {
                     return <h5><img src={contact.photos[0].url} style={{ borderRadius: "70%", marginTop: "20px", position: "relative", top: "35px" }} />   {contact.names[0].displayName} || {contact.emailAddresses[0].value} || {contact.phoneNumbers[0].value}</h5>
                 })
             }
-
-            <ul className="pagination" style = {{marginTop : "200px"}} >
-                <li className="disabled"><a href="#!"><i class="material-icons"></i></a></li>
-                <li className="active"><a href="#!">1</a></li>
-                <li className="waves-effect"><a href="#!">2</a></li>
-                <li className="waves-effect"><a href="#!">3</a></li>
-                <li className="waves-effect"><a href="#!">4</a></li>
-                <li className="waves-effect"><a href="#!">5</a></li>
-                <li className="waves-effect"><a href="#!"><i class="material-icons"></i></a></li>
-            </ul>
         </div>
     )
 }
