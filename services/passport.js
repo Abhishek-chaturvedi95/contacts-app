@@ -53,10 +53,6 @@ passport.use(new GoogleStrategy({
             // pageToken: pageToken
         }, async (err, res) => {
             if (err) return console.error("The API returned an error: " + err);
-            console.log("API CALL SUCCESSFULL --------------------")
-            console.log({ datapasport: res.data })
-            console.log("Actual object -----------------------")
-            console.log(res.data.connections)
             for(let i = 0 ; i < res.data.connections.length ; i++){
                 arr.push((res.data.connections[i]))
             }
