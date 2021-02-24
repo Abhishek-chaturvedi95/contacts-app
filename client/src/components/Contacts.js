@@ -90,13 +90,14 @@ const Contacts = () => {
                     </ul>
                 </div>
             </nav>
-            <h1 align="center">Contacts page</h1>
+            <h1 align="center"><b>My Contacts</b></h1>
+            <ul class="list-group list-group-flush">
             {
                 contacts.map(function (contact) {
-                    return <h5><img src={contact.photos[0].url} style={{ borderRadius: "70%", marginTop: "20px", position: "relative", top: "35px" }} />   {contact.names[0].displayName} || {contact.emailAddresses[0].value} || {contact.phoneNumbers[0].value}</h5>
+                    return <li class="list-group-item"><h5><img src={contact.photos[0].url} style={{ borderRadius: "70%", marginTop: "20px", position: "relative", top: "0px" }} />   {contact.names[0].displayName} || {contact.emailAddresses[0].value} || {contact.phoneNumbers[0].value}</h5></li>
                 })
             }
-        </div>
+            </ul>
     )
 }
 
